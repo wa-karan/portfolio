@@ -1,1 +1,71 @@
-# portfolio
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ポートフォリオ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo">
+                <h1>Portfolio</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#top">Top</a></li>
+                    <li><a href="#about-txt">About</a></li>
+                    <li><a href="#skills-txt">Skills</a></li>
+                    <li><a href="#works-txt">Works</a></li>
+                    <li><a href="#social-txt">Social</a></li>
+                    <!--<li><a href="#contact">お問い合わせ</a></li>-->
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div id="top">
+        <h2>Portfolio</h2>
+    </div>
+    <div id="about" class="section-name">
+        <h2 id="about-txt">About</h2>
+        <div class="profile">
+            <img src="images/icon.png" alt="profileImage" width="250" height="250">
+            <div class="profile-txt">
+                <p >自己紹介<br>あああああああああああああああああああああああああああああああああああああああああああああああああああああああああ</p>
+                <p >名前：ここにテキストを入力<br>所在地：ここにテキストを入力<br>お問い合わせ：sample@example.com</p>
+            </div>
+        </div>
+    </div>
+    <div id="skills" class="section-name">
+        <h2 id="skills-txt">Skills</h2>
+    </div>
+    <!--横スクロールで作りたい-->
+    <div id="works" class="section-name">
+        <h2 id="works-txt">Works</h2>
+    </div>
+    <div id="social" class="section-name">
+        <h2 id="social-txt">Social</h2>
+    </div>
+    <main>
+        <!--文章など-->
+    </main>
+    <footer class="site-footer">
+        &copy; 2025 Kajiyama masaharu All rights reserved.
+    </footer>
+    <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+    </script>
+</body>
+</html>
