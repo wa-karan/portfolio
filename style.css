@@ -78,7 +78,7 @@ main{
 }
 
 .section-main{
-    min-height: 100vh;
+    min-height: 720px;
     padding: 100px 20px 80px;
     display: flex;
     flex-direction: column;
