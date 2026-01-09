@@ -74,7 +74,7 @@ main{
     /*margin-top: auto;*/
 }
 
-.section-name{
+.section-main{
     min-height: 100vh;
     padding: 100px 20px 80px;
     display: flex;
@@ -84,7 +84,7 @@ main{
     position: relative;
 }
 
-.section-name h2{
+.section-main h2{
     text-align: center;
     font-size: 45px;
     font-weight: bold;
@@ -126,8 +126,24 @@ main{
     background-color: #ffffff;
 }
 
+.section-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section-title h2::after{
+    content: "";
+    display: block;
+    width: 200px;
+    height: 5px;
+    transform: translateX(0%);
+    background-color: #FBB161;
+    margin-top: 0px auto 0;
+}
+
 .profile{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     gap: 30px;
     align-items: center;
@@ -142,9 +158,22 @@ main{
     display: block;
     flex-direction: column;  /* 縦に並べる */
     max-width: 600px;
-    gap: 60px;
 }
 
 .profile img{
     border-radius: 15%;
+}
+
+.black-line {
+    position: absolute;
+    width: 190px;           /* 線の長さ */
+    height: 3px;            /* 線の太さ */
+    background-color: #FBB161;  /* 線の色（ヘッダーと同じオレンジ） */
+    border: none;           /* デフォルトの枠線を消す */
+    margin: -60px auto 50px; /* 上 左右（中央寄せ） 下 */
+}
+
+.prtext {
+    text-align: center;
+    max-width: 300px;
 }
