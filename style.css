@@ -16,7 +16,7 @@ html, body{
 body{
     display: flex;
     flex-direction: column;
-    padding-top: 65px;
+    padding-top: 9vh;
     min-height: 100vh;
     font-family: "Noto Sans JP", sans-serif;
 }
@@ -87,14 +87,14 @@ main{
     position: relative;
 }
 
-.section-main h2{
+.section-main h2:not(#un-sect){
     text-align: center;
     font-size: 45px;
     font-weight: bold;
     margin-bottom: 50px;
     position: absolute;
     top: 40px;
-    scroll-margin-top: 100px;
+    scroll-margin-top: calc(9vh + 40px);
 }
 
 /* 各セクションの背景色 */
@@ -113,7 +113,7 @@ main{
 }
 
 #about {
-    background-color: #f8f9fa;
+    background-color: #fffaf5;
 }
 
 #skills {
@@ -121,8 +121,8 @@ main{
 }
 
 #works {
-    min-height: 1440px;
-    background-color: #f8f9fa;
+    min-height: 1540px;
+    background-color: #fffaf5;
     /* 後で横スクロール用のスタイルを追加 */
 }
 
@@ -223,4 +223,101 @@ main{
 
 .work-card a:hover {
     color: #003b00;                  /* ホバー時の色 */
+    text-decoration: underline;
+}
+
+.works-scroll-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    /*padding: 80px 0;*/
+    height: 360px;
+    width: 800px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    align-items: center;
+}
+
+/*
+.works-scroll-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+}
+.works-scroll-wrapper::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 200px;
+    background: linear-gradient(to right, transparent, #666);
+    pointer-events: none;
+    z-index: 1;
+}
+*/
+.work-card-horizontal {
+    z-index: 0;               /* カードの上に表示 */
+    align-items: center;
+    display: flex;              /* 中身を横並びに */
+    min-width: 200px;           /* カードの最小幅 */
+    height: 200px;              /* カードの高さ */
+    flex-shrink: 0;             /* 縮まないようにする */
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;           /* はみ出た部分を隠す */
+    max-width: 400px;
+}
+
+.work-img-horizontal {
+    width: 200px;               /* 画像の幅 */
+    height: 200px;              /* 画像の高さ（カードと同じ） */
+    object-fit: cover;          /* 画像をきれいに収める */
+    flex-shrink: 0;             /* 画像が縮まないようにする */
+    border-radius: 15px;
+}
+
+.work-info-horizontal {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.work-info-horizontal h3 {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+}
+
+.work-info-horizontal a{
+    text-decoration: none;           /* 下線を消す */
+    color: #FBB161;                  /* リンクの色 */
+}
+
+.work-info-horizontal a:hover{
+    color: #003b00;                  /* ホバー時の色 */
+    text-decoration: underline;
+}
+
+.work-info-horizontal p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.phone-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 24px;
+    padding: 20px;
+}
+
+.work-scroll {
+    position: relative;
 }
