@@ -264,6 +264,7 @@ main{
 .scroll-area-label {
     position: relative;
     top: 65px;
+    margin-top: -55px;
     text-align: center;
     font-size: 20px;
     margin-bottom: 10px;
