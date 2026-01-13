@@ -413,3 +413,42 @@ main{
 .work-scroll {
     position: relative;
 }
+
+.social-content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.social-content-block {
+    display: flex;
+    width: 600px;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-container-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.social-link-text {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;           /* 下線を消す */
+    color: #fb6161;                  /* リンクの色 */
+}
+
+.social-link-text:hover {
+    color: #003b00;                  /* ホバー時の色 */
+    text-decoration: underline;
+}
+
+.social-container-icon img {
+    width: 100px;      /* カードの幅いっぱいに */
+    height: 100px;
+    object-fit: cover; /* 縦横比を保ちつつトリミング */
+    border-radius: 10%;
+}
