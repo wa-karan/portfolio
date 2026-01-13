@@ -10,6 +10,7 @@ html{
 
 html, body{
     height: 100%;
+    overscroll-behavior: none;
 }
 
 body{
@@ -120,6 +121,7 @@ main{
 
 #skills {
     background-color: #ffffff;
+    min-height: 1540px;
 }
 
 #works {
@@ -148,6 +150,7 @@ main{
 }
 
 .profile{
+    padding-top: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -170,6 +173,16 @@ main{
     border-radius: 15%;
 }
 
+.profile-go-social {
+    text-decoration: none;           /* 下線を消す */
+    color: #fb6161;                  /* リンクの色 */
+}
+
+.profile-go-social:hover {
+    color: #003b00;                  /* ホバー時の色 */
+    text-decoration: underline;
+}
+
 .black-line {
     position: absolute;
     width: 190px;           /* 線の長さ */
@@ -182,6 +195,70 @@ main{
 .prtext {
     text-align: center;
     max-width: 300px;
+}
+
+.skill-main{
+    padding-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    gap: 20px;
+}
+
+.skill-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 300px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+    padding-top: 30px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+.skill-card h3 {
+    margin: 10px 0;
+    font-size: 24px;
+}
+
+.skill-img {
+    width: 100%;      /* カードの幅いっぱいに */
+    height: 200px;
+    object-fit: cover; /* 縦横比を保ちつつトリミング */
+    border-radius: 10%;
+}
+
+.skill-progress {
+    -webkit-appearance: none;
+}
+::-webkit-progress-bar {
+    background-color: #003b00;
+    border-radius: 4px;
+}
+::-webkit-progress-value {
+    background-color: #FBB161;
+    border-radius: 4px;
+}
+
+.skill-card-content {
+    margin-top: -10px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+}
+
+.skill-card-content strong {
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+.skill-card-info {
+    max-width: 200px;
 }
 
 .works-pickup {
@@ -266,7 +343,7 @@ main{
     user-select: none;       /* テキスト選択無効 */
     position: relative;
     top: 65px;
-    margin-top: -55px;
+    margin-top: -45px;
     text-align: center;
     font-size: 20px;
     margin-bottom: 10px;
