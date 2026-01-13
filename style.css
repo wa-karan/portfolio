@@ -262,6 +262,8 @@ main{
 */
 
 .scroll-area-label {
+    pointer-events: none;    /* クリック無効 */
+    user-select: none;       /* テキスト選択無効 */
     position: relative;
     top: 65px;
     margin-top: -55px;
