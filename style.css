@@ -132,6 +132,7 @@ main{
 
 #social {
     background-color: #ffffff;
+    min-height: 540px;
 }
 
 .section-title{
@@ -201,7 +202,7 @@ main{
     padding-top: 40px;
     display: grid;
     grid-template-columns: repeat(3, 2fr);
-    gap: 20px;
+    gap: 40px;
 }
 
 .skill-card {
@@ -419,7 +420,7 @@ main{
     grid-template-columns: repeat(1, 1fr);
     flex-direction: column;
     gap: 15px;
-    margin-top: 40px;
+    padding-top: 140px;
 }
 
 .social-content-block {
@@ -447,8 +448,23 @@ main{
 }
 
 .social-container-icon img {
-    width: 100px;      /* カードの幅いっぱいに */
-    height: 100px;
+    width: 80px;      /* カードの幅いっぱいに */
+    height: 100%;
     object-fit: cover; /* 縦横比を保ちつつトリミング */
-    border-radius: 10%;
+}
+
+.click-to-copy {
+    user-select: none;
+    font-size: 24px;
+    text-decoration: none;           /* 下線を消す */
+    color: #fb6161;                  /* リンクの色 */
+}
+
+.click-to-copy:hover{
+    color: #003b00;                  /* ホバー時の色 */
+    text-decoration: underline;
+}
+
+.click-to-copy .copied{
+    color: #d4fb61;                  /* リンクの色 */
 }
